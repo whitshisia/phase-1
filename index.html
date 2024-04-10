@@ -27,7 +27,7 @@ style="background-image: url('./images/lobby.jpg');">
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
           <li>
-            <a href="./pages/home.html" class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:text-red-700 md:p-0 dark:text-white md:hover:text-red-700 md:dark:text-red-500" aria-current="page">Home</a>
+            <a href="./pages/home.html" class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:text-red-700 md:p-0 dark:text-white md:dark:text-red-500" aria-current="page">Home</a>
           </li>
           <li>
             <a href="./pages/about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
@@ -102,41 +102,38 @@ style="background-image: url('./images/lobby.jpg');">
     <!-- hotel posts -->
     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Available Rooms</h5>
 
-    <section class="flex justify-between items-center my-3">
-        <div class="flex gap-4">
-            <div class="block mx-auto w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                <img src="./images/room1.jpg" class="object-fill h-48 w-96" alt="VIP ROOM" />
-                <div class="flex justify-between mt-4">
-                    <div>
-                        <h3 class="text-xl font-bold">VIP Room</h3>
-                        <p class="font-normal text-gray-700 dark:text-gray-400">This room is available for booking. $10,000 per night.</p>
-                    </div>
-                    <button id="bookNowButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Book Now</button>
+    <section class="flex justify-between items-center my-3 flex-col md:flex-row">
+        <div class="block mx-auto w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 md:w-96 md:mr-4">
+            <img src="./images/room1.jpg" class="object-fill h-48 w-full" alt="VIP ROOM" />
+            <div class="flex justify-between mt-4">
+                <div>
+                    <h3 class="text-xl font-bold">VIP Room</h3>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">This room is available for booking. $10,000 per night.</p>
                 </div>
+                <button id="bookNowButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Book Now</button>
             </div>
-                <div class="flex gap-4">
-                    <div class="block mx-auto w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                        <img src="./images/room2.jpg" class="object-scale-down h-48 w-96" alt="VIP ROOM" />
-                        <div class="flex justify-between mt-4">
-                            <div>
-                                <h3 class="text-xl font-bold">BUSSINESS Room</h3>
-                                <p class="font-normal text-gray-700 dark:text-gray-400">This room is available for booking. $1,000 per night.</p>
-                            </div>
-                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Book Now</button>
-                        </div>
-                    </div>
-                        <div class="flex gap-4">
-                            <div class="block mx-auto w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                                <img src="./images/room3.jpg" class="object-scale-down h-48 w-96" alt="VIP ROOM" />
-                                <div class="flex justify-between mt-4">
-                                    <div>
-                                        <h3 class="text-xl font-bold">ECONOMY Room</h3>
-                                        <p class="font-normal text-gray-700 dark:text-gray-400">This room is available for booking. $100 per night.</p>
-                                    </div>
-                                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Book Now</button>
-                                </div>
-                            </div>
-                </section>
+        </div>
+        <div class="block mx-auto w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 md:w-96 md:mx-4">
+            <img src="./images/room2.jpg" class="object-fill h-48 w-full" alt="VIP ROOM" />
+            <div class="flex justify-between mt-4">
+                <div>
+                    <h3 class="text-xl font-bold">BUSINESS Room</h3>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">This room is available for booking. $1,000 per night.</p>
+                </div>
+                <button id="bookNowButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Book Now</button>
+            </div>
+        </div>
+        <div class="block mx-auto w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 md:w-96 md:ml-4">
+            <img src="./images/room3.jpg" class="object-fill h-48 w-full" alt="VIP ROOM" />
+            <div class="flex justify-between mt-4">
+                <div>
+                    <h3 class="text-xl font-bold">ECONOMY Room</h3>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">This room is available for booking. $100 per night.</p>
+                </div>
+                <button id="bookNowButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Book Now</button>
+            </div>
+        </div>
+    </section>
     <hr>
     <!-- footer -->
     <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
