@@ -3,7 +3,7 @@ let reservations = [];
 
 // Function to fetch reservations
 const fetchReservations = () => {
-    const url = 'http://localhost:3000/res/';
+    const url = 'https://phase-1-2.onrender.com/res/';
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -35,7 +35,7 @@ const renderReservations = (reservations) => {
 
 // Function to handle reservation form submission
 const submitReservation = () => {
-    const url = 'http://localhost:3000/res/';
+    const url = 'https://phase-1-2.onrender.com/res/';
     const name = document.getElementById('name').value.trim();
     const date = document.getElementById('date').value.trim();
     const time = document.getElementById('time').value.trim();
@@ -69,7 +69,7 @@ const submitReservation = () => {
 
 // Function to delete a reservation
 const deleteReservation = (id) => {
-    const url = `http://localhost:3000/res/${id}`;
+    const url = `https://phase-1-2.onrender.com/res/${id}`;
     fetch(url, {
         method: 'DELETE'
     })
@@ -82,7 +82,7 @@ const deleteReservation = (id) => {
 
 const editReservation = (index) => {
     const reservation = reservations[index];
-    const url = 'http://localhost:3000/res/';
+    const url = 'https://phase-1-2.onrender.com/res/';
 
     document.getElementById('name').value = reservation.name;
     document.getElementById('date').value = reservation.date;
@@ -145,7 +145,7 @@ const bookNowAndUpdateAvailability = () => {
             time,
             details
         };
-        fetch('http://localhost:3000/res/', {
+        fetch('https://phase-1-2.onrender.com/res/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
