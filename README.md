@@ -12,8 +12,8 @@
     - And your application is running.
        
 ## Live link
-Deployed Frontend can be accessed here [Blog](https://nextblog-k-koech.vercel.app/)  
-Deployed Backend can be accessed here [Blog](https://blog-javascript-7c8x.onrender.com)  
+Deployed Frontend can be accessed here 
+Deployed Backend can be accessed here [APP](https://phase-1-2.onrender.com/res/)
 
 
 ## Known Bugs
