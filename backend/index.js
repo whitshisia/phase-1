@@ -18,7 +18,7 @@ const renderReservations = (reservations) => {
     const reservationList = document.getElementById('reservationList');
     reservationList.innerHTML = '';
 
-    reservations.forEach((reservation, index) => {
+    reservations.forEach((reservation) => {
         const reservationItem = document.createElement('div');
         reservationItem.className = 'border-2 border-black p-4 m-4 rounded';
         reservationItem.innerHTML = `
@@ -130,13 +130,13 @@ const editReservation = (index) => {
     
     submitEditButton.addEventListener('click', submitEditHandler);
 };
-// Function to handle "Book Now" button click and update room availability
+
+    // Function to handle "Book Now" button click and update room availability
 const bookNowAndUpdateAvailability = () => {
     const name = document.getElementById('name').value.trim();
     const date = document.getElementById('date').value.trim();
     const time = document.getElementById('time').value.trim();
     const details = document.getElementById('details').value.trim();
-    const bookNowButton = document.getElementById('bookNowButton');
 
     if (name && date && time && details) {
         const reservation = {
@@ -157,9 +157,10 @@ const bookNowAndUpdateAvailability = () => {
             // Assuming the reservation is successfully stored in the backend,
             // you can display a success message to the user
             alert('Booking successfully made!');
-            // Disable the button and update its text
-            bookNowButton.disabled = true;
-            bookNowButton.textContent = 'Room Unavailable';
+            // Disable the clicked button and update its text
+            const clickedButton = event.target;
+            clickedButton.disabled = true;
+            clickedButton.textContent = 'Room Unavailable';
         })
         .catch(error => console.error('Error making reservation:', error));
     } else {
@@ -167,11 +168,11 @@ const bookNowAndUpdateAvailability = () => {
     }
 };
 
-// Event listener for "Book Now" button
-document.getElementById('bookNowButton').addEventListener('click', () => {
-    bookNowAndUpdateAvailability();
+// Select all "Book Now" buttons and add event listeners to each
+document.querySelectorAll('.bookNowButton').forEach(button => {
+    button.addEventListener('click', bookNowAndUpdateAvailability);
 });
-
+           
 
 
 // Function to show reservation form
