@@ -12,7 +12,7 @@
     - And your application is running.
        
 ## Live link
-Deployed Frontend can be accessed here 
+Deployed Frontend can be accessed here (https://whitshisia.github.io/phase-1/)
 Deployed Backend can be accessed here [APP](https://phase-1-2.onrender.com/res/)
 
 
